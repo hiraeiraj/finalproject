@@ -1,0 +1,56 @@
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+}
+
+.skip-link:focus {
+position: static;
+  width: auto;
+  height: auto;
+  color: #FFFF;
+  background-color: #00274C;
+}
+
+.nav-grid-items {
+    background-color: #00274C;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 20px;
+    justify-items: center;
+
+}
+
+.header-item {
+    font-weight: bolder;
+    justify-items: stretch;
+    padding: 5%;
+    color: white;
+
+}
+
+
+nav a {
+    text-decoration: none;
+    justify-items: stretch;
+    color: white;
+}
+
+nav a:hover {
+    color: #FFCB05;
+    text-decoration: underline;
+
+}
+nav a:target {
+    color: white;
+  background-color: #007bff;
+  font-weight: bold;
+}
+
+img {
+    width: 200px;
+}
