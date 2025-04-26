@@ -1,0 +1,66 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is This It</title>
+</head>
+<body>
+    <header>
+        <a class="skip-link" href="#main">Skip to Main Content</a>
+
+        <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" class="mobile-only">☰</button>
+
+        <nav id="mobile-nav" class="mobile-only">
+            <button id="close-menu" class="close-menu" aria-label="Close menu">&times;</button>
+            <ul class="nav-grid-items">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="the_band.html">The Band</a></li>
+                <li><a href="isthisit.html">Is This It</a></li>
+                <li><a href="roomonfire.html">Room on Fire</a></li>
+                <li><a href="fioe.html">First Impressions of Earth</a></li>
+                <li><a href="angles.html">Angles</a></li>
+                <li><a href="comedownmachine.html">Comedown Machine</a></li>
+                <li><a href="thenewabnormal.html">The New Abnormal</a></li>
+            </ul>
+        </nav>
+
+        <nav id="desktop-nav" class="desktop-only">
+            <ul class="nav-grid-items">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="the_band.html">The Band</a></li>
+                <li id="active" class="has-dropdown">
+                    <a href="#" id="albums-menu" aria-haspopup="true" aria-expanded="false">Albums</a>
+                    <ul class="dropdown" role="menu" aria-labelledby="albums-menu">
+                        <li><a href="isthisit.html">Is This It</a></li>
+                        <li><a href="roomonfire.html">Room on Fire</a></li>
+                        <li><a href="fioe.html">First Impressions of Earth</a></li>
+                        <li><a href="angles.html">Angles</a></li>
+                        <li><a href="comedownmachine.html">Comedown Machine</a></li>
+                        <li><a href="thenewabnormal.html">The New Abnormal</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="about">
+            <img id="strokes" src="images/the new abnormal album cover.jpg" alt="the strokes logo">
+            <h1>The New Abnormal</h1>
+            <p>Released on April 10, 2020</p>
+            <p> Released in 2020 — nearly two decades after Is This It — The New Abnormal felt like The Strokes stepping back into the spotlight with something to actually say. It had been seven years since their last album, and a lot had changed — in the world, in the band, in their lives. But instead of chasing trends or trying to recapture their youth, they did something even better: they evolved.
+                With legendary producer Rick Rubin behind the board, the album has a cleaner, more spacious sound — still very “Strokes,” but more thoughtful, more refined. You can hear the maturity in tracks like “At the Door” (an atmospheric, synth-heavy ballad that doesn’t even have drums) and “Ode to the Mets” (melancholic, dreamy, and kind of devastating in the best way).
+                Of course, they didn’t totally leave their swagger behind. “Bad Decisions” and “Brooklyn Bridge to Chorus” are total earworms, blending new wave vibes with that signature Strokes punch. And Julian’s vocals? Still cool, but with more emotional weight — like he’s not just performing anymore, but actually letting you in.
+                The New Abnormal wasn’t just a comeback — it was a reminder that The Strokes aren’t stuck in the past. They’ve grown, they’ve taken hits, they’ve tried weird things, and now they’ve landed in a space that feels honest, confident, and kind of timeless. It’s one of their most critically acclaimed albums since their debut — and for good reason.</p>
+        </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2xkZV2Hl1Omi8rk2D7t5lN?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </main>
+    <footer>
+        © The Strokes Fan Page <span id="year"></span>
+            <p><a href="https://www.thestrokes.com/">The Strokes</a></p>
+      </footer>
+      <script>  document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    <script src="js/functions.js"></script>
+</body></html>

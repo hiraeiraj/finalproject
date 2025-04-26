@@ -1,22 +1,413 @@
-.skip-link {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+/* overall styling starts */
+body {
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+}
 
+h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 10px;
+  text-align: justify;
+  font-family: 'Fredoka', sans-serif;
+}
+
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  border: 1px solid #fff;
+  z-index: 1000;
 }
 
 .skip-link:focus {
-position: static;
-  width: auto;
-  height: auto;
-  color: #FFFF;
-  background-color: #00274C;
+  top: 10px;
+  left: 10px;
+}
+
+iframe{
+  display: flex;
+  width: 100%;
+  justify-self: center;
+}
+
+footer {
+  font-family: 'Fredoka', sans-serif;
+  grid-area: footer;
+  background-color: white;
+  color: #00274C;
+  font-weight: bold;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* overall styling ends */
+
+/* mobile header / nav bar styling starts */
+header {
+  background-color: black;
+  padding: 20px;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.nav-grid-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-grid-items li {
+  text-align: center;
+}
+
+.nav-grid-items li a {
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+}
+
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.973);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#menu-toggle:checked + #mobile-nav {
+  display: flex;
 }
 
 
-img {
-    width: 200px;
+#menu-toggle {
+  top: 0;
+  right: 0;
+}
+
+#close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+#mobile-nav .nav-grid-items {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#mobile-nav .nav-grid-items li {
+  margin: 10px 0;
+}
+
+
+/* mobile header / nav bar styling ends */
+
+/*band page styling begins*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#strokes {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.band-photo {
+  max-width: 100%;
+  padding: 20px;
+}
+
+
+.band-history {
+  text-align: center;
+  padding: 0 15px;
+}
+
+#band-bio-text {
+  text-align: left;
+}
+
+.strokes_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.strokes-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.strokes-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.1s ease;
+}
+
+.strokes-item img:hover {
+  transform: scale(1.1);
+  align-items: center;
+}
+
+.imagelabel {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+/*band page styling ends*/
+
+
+
+/*about me page styling starts*/
+#self {
+  border-radius: 50%;
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+#home-about.about p {
+  padding: 30px;
+}
+/*about me page styling ends*/
+
+
+
+
+
+
+
+
+
+/* carousel styling starts */
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 210px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.album-cover {
+  width: 200px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button:hover {
+  color: #f2f2f2;
+}
+
+
+/* carousel styling ends */
+
+
+/* Mobile-first approach with min-width */
+@media screen and (min-width: 768px) {
+
+
+  /* general styling starts */
+
+  #active {
+    text-decoration:underline;
+  }
+
+  .nav-grid-items a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  p {
+    max-width: 600px;
+    text-align: justify;
+    margin-left: 20px; }
+
+    iframe{
+
+      width: 50%;
+
+    }
+
+/* general styling ends*/
+
+  /* header / nav bar styling for desktop starts */
+  .mobile-only {
+      display: none;
+  }
+
+  .desktop-only {
+      display: block;
+  }
+
+  .nav-grid-items li {
+    text-align: left;
+  }
+
+  .carousel-track-container {
+    overflow: hidden;
+    width: 650px;
+  }
+
+  #desktop-nav .nav-grid-items li {
+      display: inline-block;
+      margin-right: 30px;
+  }
+
+
+  #desktop-nav .has-dropdown {
+      position: relative;
+  }
+
+#desktop-nav {
+  text-align: right;
+}
+
+#desktop-nav .has-dropdown:hover .dropdown {
+  display: block;
+  margin: auto;
+}
+
+.has-dropdown {
+  position: relative;
+  right: 0px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: #444;
+  min-width: 200px;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.dropdown li a {
+  padding: 10px;
+  align-self: left;
+}
+
+/* header / nav bar styling for desktop ends */
+
+/* about me page styling starts */
+  #home-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#self {
+    margin: 0;
+    width: 250px;
+    height: 250px;
+}
+
+/* about me page styling ends */
+
+
+
+/*band page styling begins*/
+
+.strokes_container {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.band-photo {
+  max-width: 600px;
+}
+
+#band-bio-text {
+
+  font-size: small;
+}
+
+
+/*band page styling ends*/
+
+
+
+
 }

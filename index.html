@@ -1,67 +1,93 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
-<body class="body-grid">
+
+<body>
     <header>
-        <a class="skip-link" href= "#content">Skip to Main Content</a>
-            <nav>
-                <ul class="nav-grid-items">
-                    <li class="header-item" id = "current"><a href = "index.html">about me</a></li>
-                    <li class="header-item"><a href = "the_band.html">the band</a></li>
-                    <li class="header-item"><a>albums</a></li>
-                    <ul>
-                        <li class="header-item"><a href = "isthisit.html">is this it</a></li>
-                        <li class="header-item"><a href = "roomonfire.html">room on fire</a></li>
-                        <li class="header_item"><a href="fioe.html">first impressions of earth</a></li>
-                        <li class="header-item"><a href="angles.html">angles</a></li>
-                        <li class="header-item"><a href="comedownmachine.html">comedown machine</a></li>
-                        <li class="header_item"><a href="thenewabnormal.html">the new abnormal</a></li>
-                        <li class="header-item"><a href="singles.html">singles and eps</a></li>
+
+        <a class="skip-link" href="#main">Skip to Main Content</a>
+
+        <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" class="mobile-only">☰</button>
+
+        <nav id="mobile-nav" class="mobile-only">
+            <button id="close-menu" class="close-menu" aria-label="Close menu">&times;</button>
+            <ul class="nav-grid-items">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="the_band.html">The Band</a></li>
+                <li><a href="isthisit.html">Is This It</a></li>
+                <li><a href="roomonfire.html">Room on Fire</a></li>
+                <li><a href="fioe.html">First Impressions of Earth</a></li>
+                <li><a href="angles.html">Angles</a></li>
+                <li><a href="comedownmachine.html">Comedown Machine</a></li>
+                <li><a href="thenewabnormal.html">The New Abnormal</a></li>
+            </ul>
+        </nav>
+
+
+        <nav id="desktop-nav" class="desktop-only">
+            <ul class="nav-grid-items">
+                <li id="active"><a href="index.html">About Me</a></li>
+                <li ><a href="the_band.html">The Band</a></li>
+                <li class="has-dropdown">
+                    <a href="#" id="albums-menu" aria-haspopup="true" aria-expanded="false">Albums</a>
+                    <ul class="dropdown" role="menu" aria-labelledby="albums-menu">
+                        <li><a href="isthisit.html">Is This It</a></li>
+                        <li><a href="roomonfire.html">Room on Fire</a></li>
+                        <li><a href="fioe.html">First Impressions of Earth</a></li>
+                        <li><a href="angles.html">Angles</a></li>
+                        <li><a href="comedownmachine.html">Comedown Machine</a></li>
+                        <li><a href="thenewabnormal.html">The New Abnormal</a></li>
                     </ul>
-                </ul>
-            </nav>
-        </header>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <main id="main" style="display: block;">
         <div id="home-about" class="about">
-            <div>
-                <h1>about me</h1>
-            <img id="self" src="images/me.jpeg" alt="a photo of myself">
-            </div>
-            <div>
-                <p>Hey there! I'm Hira, and I'm a student at the University of Michigan School of Information studying UX Design. I love The Strokes and as a final project for my accessible web design &amp; development class this semester, I decided to create a fun interactive website showcasing the band's history, members, and music!</p>
-                <p>Besides music, I enjoy knitting, crocheting, journalling, and drawing</p>
-                <p>I hope you like my site!</p>
-            </div>
-        </div>
-        <div class="home-section">
-            <h1>my favorite albums</h1>
-            <div id="home-polaroids" class="polaroids">
-                <a href="roomonfire.html"><img src="images/room on fire album cover.jpg" alt="room on fire"></a>
-                <a href="fioe.html"><img src="images/fioe album cover.jpg" alt="first impressions of earth"></a>
-                <a href="comedownmachine.html"><img src="images/comedown machine album cover.jpg" alt="comedown machine"></a>
-            </div>
+            <h1>Hello, I'm Hira! </h1>
+            <img id="self" src="images/me.jpeg" alt="A photo of myself">
+        
+            <p>
+            I'm a student at the University of Michigan studying UX Research and Design. I love music and I especially love The Strokes. For my final project for my web deisgn class, I decided to create a website dedicated to The Strokes. There is a page about the band's history and each of the band members and there are dedicated pages for each of their albums. Besides music, I'm an avid knitter and crocheter. I love all things fiber arts! I hope you enjoy my website!
+                </p>
         </div>
 
-         </main>
-    <footer class="footer" style="display: block;">
-        <div class="footer_info">
-            <li class="nav_item"><a href="index.html">about me</a></li>
-                <a> class="nav_item"><a href="the_band.html">the band</a>
-                <a> class="nav_item"><a href="isthisit.html">is this it</a>
-                <a> class="nav_item"><a href="roomonfire.html">room on fire</a>
-                <a> class="nav_item"><a href="fioe.html">first impressions of earth</a>
-                <a> class="nav_item"><a href="angles.html">angles</a>
-                <a> class="nav_item"><a href="comedownmachine.html">comedown machine</a>
-                <a> class="nav_item"><a href="thenewabnormal.html">the new abnormal</a>
-                <a> class="nav_item"><a href="singles.html">singles and eps</a>
+        <div class="home-section">
+            <h1>Explore The Stroke's Albums</h1>
+            <div id="album-carousel" class="carousel-container">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel-track-container">
+                    <div id="home-polaroids" class="carousel-track">
+                        <!-- Slideshow Images -->
+                        <a href="isthisit.html"><img class="album-cover" src="images/is this it album cover.png" alt="Is This It"></a>
+                        <a href="roomonfire.html"><img class="album-cover" src="images/room on fire album cover.jpg" alt="Room on Fire"></a>
+                        <a href="fioe.html"><img class="album-cover" src="images/fioe album cover.jpg" alt="First Impressions of Earth"></a>
+                        <a href="angles.html"><img class="album-cover" src="images/angles album cover.jpg" alt="Angles"></a>
+                        <a href="comedownmachine.html"><img class="album-cover" src="images/comedown machine album cover.jpg" alt="Comedown Machine"></a>
+                        <a href="thenewabnormal.html"><img class="album-cover" src="images/the new abnormal album cover.jpg" alt="The New Abnormal"></a>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
         </div>
-    </footer>
+    </main>
+
+    <footer>
+        © The Strokes Fan Page <span id="year"></span> 
+            <p><a href="https://www.thestrokes.com/">The Strokes</a></p>
+      </footer>
+      <script>  document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     <script src="js/site.js"></script>
-</body></html>
+</body>
+
+</html>
